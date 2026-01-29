@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse the latest posts on CHATTA Links. Discover updates from people you follow and explore new content in real time."
+    />
+    <title>CHATTA Links | Post Feed Page</title>
+    <script
+      src="https://kit.fontawesome.com/bfed71705b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/scripts/main.js" type="module"></script>
+  </head>
+
+  <body class="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gray-100">
+    <header class="bg-white shadow-lg">
+      <nav class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex items-center">
+            <span class="h-auto w-20">
+              <img src="/assets/chatta-links-logo.png" alt="CHATTA Links logo"
+            /></span>
+          </a>
+
+          <div class="hidden items-center space-x-8 md:flex">
+            <a
+              href="/index.html"
+              class="border-b-2 border-amber-500 px-2 py-2 font-semibold text-amber-500"
+              >Home</a
+            >
+            <a
+              href="/feed/index.html"
+              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
+              >All Posts</a
+            >
+            <a
+              href="/profile/index.html"
+              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
+              >Profile</a
+            >
+          </div>
+
+          <div class="hidden items-center space-x-4 md:flex">
+            <a
+              href="/profile/index.html"
+              class="rounded-lg border-2 border-amber-500 px-4 py-1.5 text-gray-600 transition duration-300 hover:bg-amber-500 hover:text-white"
+              >Log In</a
+            >
+            <a
+              href="/profile/index.html"
+              class="rounded-lg bg-amber-500 px-4 py-1.5 text-white transition duration-300 hover:bg-amber-600"
+              >Register</a
+            >
+          </div>
+
+          <div class="flex items-center md:hidden">
+            <button
+              class="group rounded-lg p-2 hover:bg-gray-100 md:hidden"
+              id="menu-btn"
+              aria-label="Open menu"
+            >
+              <svg
+                class="h-6 w-6 text-gray-700 group-hover:text-amber-500"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="hidden space-y-2 px-4 pb-4 md:hidden" id="mobile-menu">
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="index.html"
+                class="block rounded-lg bg-amber-500 px-3 py-2 font-bold text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/feed/index.html"
+                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-500"
+                >All Posts</a
+              >
+            </li>
+            <li>
+              <a
+                href="/profile/index.html"
+                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-500"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="/profile/index.html"
+                class="block rounded-lg border-2 border-amber-500 px-3 py-1.5 text-center font-semibold text-gray-700 hover:text-amber-500"
+                >Log In</a
+              >
+            </li>
+            <li>
+              <a
+                href="/profile/index.html"
+                class="block rounded-lg bg-amber-500 px-3 py-1.5 text-center font-semibold text-white"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <footer class="mt-12 bg-white py-8 shadow-inner">
+      <div class="container mx-auto space-y-4 text-center">
+        <a href="/index.html">
+          <img
+            src="/assets/chatta-links-logo.png"
+            alt="CHATTA Links logo"
+            class="m-auto h-auto w-20"
+          />
+        </a>
+
+        <div class="flex justify-center space-x-6 text-gray-600">
+          <a href="/index.html" class="hover:text-amber-500">Home</a>
+          <a href="terms/index.html" class="hover:text-amber-500">Terms</a>
+          <a href="privacy/index.html" class="hover:text-amber-500">Privacy</a>
+        </div>
+        <div class="flex justify-center space-x-5 text-xl text-gray-500">
+          <a href="https://www.facebook.com" aria-label="Link to Facebook">
+            <i class="fa-brands fa-square-facebook hover:text-amber-500"></i>
+          </a>
+          <a href="https://www.instagram.com" aria-label="Link to Instagram">
+            <i class="fa-brands fa-square-instagram hover:text-amber-500"></i>
+          </a>
+          <a href="https://www.youtube.com" aria-label="Link to YouTube">
+            <i class="fa-brands fa-square-youtube hover:text-amber-500"></i>
+          </a>
+          <a href="https://www.tiktok.com" aria-label="Link to TikTok">
+            <i class="fa-brands fa-tiktok hover:text-amber-500"></i>
+          </a>
+          <a href="https://x.com" aria-label="Link to x (formerly Twitter)">
+            <i class="fa-brands fa-square-x-twitter hover:text-amber-500"></i>
+          </a>
+        </div>
+        <p class="text-sm text-gray-400">
+          Copyright &copy; CHATTALinksLtd 2026
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
