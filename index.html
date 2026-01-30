@@ -40,23 +40,23 @@
         <div class="flex items-center justify-between">
           <a href="/" class="flex items-center">
             <span class="h-auto w-20">
-              <img src="/assets/chatta-links-logo.png" alt="CHATTA Links logo"
+              <img src="assets/chatta-links-logo.png" alt="CHATTA Links logo"
             /></span>
           </a>
 
           <div class="hidden items-center space-x-8 md:flex">
             <a
-              href="/index.html"
+              href="index.html"
               class="border-b-2 border-amber-500 px-2 py-2 font-semibold text-amber-500"
               >Home</a
             >
             <a
-              href="/feed/index.html"
+              href="feed/index.html"
               class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
               >All Posts</a
             >
             <a
-              href="/profile/index.html"
+              href="profile/index.html"
               class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
               >Profile</a
             >
@@ -64,12 +64,12 @@
 
           <div class="hidden items-center space-x-4 md:flex">
             <a
-              href="/profile/index.html"
+              href="profile/index.html"
               class="rounded-lg border-2 border-amber-500 px-4 py-1.5 text-gray-600 transition duration-300 hover:bg-amber-500 hover:text-white"
               >Log In</a
             >
             <a
-              href="/profile/index.html"
+              href="profile/index.html"
               class="rounded-lg bg-amber-500 px-4 py-1.5 text-white transition duration-300 hover:bg-amber-600"
               >Register</a
             >
@@ -107,28 +107,28 @@
             </li>
             <li>
               <a
-                href="/feed/index.html"
+                href="feed/index.html"
                 class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-500"
                 >All Posts</a
               >
             </li>
             <li>
               <a
-                href="/profile/index.html"
+                href="profile/index.html"
                 class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-500"
                 >Profile</a
               >
             </li>
             <li>
               <a
-                href="/profile/index.html"
+                href="profile/index.html"
                 class="block rounded-lg border-2 border-amber-500 px-3 py-1.5 text-center font-semibold text-gray-700 hover:text-amber-500"
                 >Log In</a
               >
             </li>
             <li>
               <a
-                href="/profile/index.html"
+                href="profile/index.html"
                 class="block rounded-lg bg-amber-500 px-3 py-1.5 text-center font-semibold text-white"
                 >Register</a
               >
@@ -138,18 +138,76 @@
       </nav>
     </header>
 
+    <main
+      class="container mx-auto flex flex-col items-center justify-center px-4 py-12"
+    >
+      <h1 class="mb-8 text-center text-3xl font-bold text-gray-800">
+        Welcome to <span class="text-amber-500">CHATTA Links</span>
+      </h1>
+      <div class="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
+        <form class="space-y-5" action="profile/index.html" method="get">
+          <div>
+            <label
+              class="mb-1 block text-sm font-medium text-gray-600"
+              for="email"
+              >Email</label
+            >
+            <input
+              class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-amber-400 focus:outline-none"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+              required
+            />
+          </div>
+          <div>
+            <label
+              class="mb-1 block text-sm font-medium text-gray-600"
+              for="password"
+              >Password</label
+            >
+            <input
+              class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-amber-400 focus:outline-none"
+              type="password"
+              id="password"
+              name="password"
+              minlength="8"
+              placeholder="Enter password"
+              required
+            />
+          </div>
+          <button
+            class="w-full rounded-lg border-2 border-amber-500 bg-white py-3 font-semibold text-gray-500 shadow-md transition hover:bg-white hover:text-amber-500"
+            type="submit"
+          >
+            Log In
+          </button>
+          <button
+            class="w-full rounded-lg bg-amber-500 py-3 font-semibold text-white shadow-md transition hover:bg-amber-600 hover:text-white"
+            type="submit"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+      <div id="logged-in-actions" style="display: none">
+        <a href="./posts/index.html" class="button-home">Go to feed</a>
+      </div>
+    </main>
+
     <footer class="mt-12 bg-white py-8 shadow-inner">
       <div class="container mx-auto space-y-4 text-center">
         <a href="index.html">
           <img
-            src="/assets/chatta-links-logo.png"
+            src="assets/chatta-links-logo.png"
             alt="CHATTA Links logo"
             class="m-auto h-auto w-20"
           />
         </a>
 
         <div class="flex justify-center space-x-6 text-gray-600">
-          <a href="/index.html" class="hover:text-amber-500">Home</a>
+          <a href="index.html" class="hover:text-amber-500">Home</a>
           <a href="terms/index.html" class="hover:text-amber-500">Terms</a>
           <a href="privacy/index.html" class="hover:text-amber-500">Privacy</a>
         </div>
