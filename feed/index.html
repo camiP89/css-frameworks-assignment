@@ -137,6 +137,76 @@
         </div>
       </nav>
     </header>
+    <main class="bg-gray-100 p-4">
+      <div class="container mx-auto px-4">
+        <h1
+          class="font-heading text-l mx-auto mb-3 rounded-lg bg-amber-500 p-2 text-center font-bold text-gray-700"
+        >
+          All Posts
+        </h1>
+        <div
+          class="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+        >
+          <!-- search bar -->
+          <div class="relative w-full md:w-1/2">
+            <input
+              type="text"
+              placeholder="Search Posts..."
+              class="w-full rounded-lg border-2 border-gray-300 py-2 pr-4 pl-10 focus:border-amber-500 focus:ring-amber-200 focus:outline-none"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-gray-400"
+            ></i>
+          </div>
+
+          <!-- Sort -->
+          <select
+            class="rounded-lg border-gray-300 bg-white px-4 py-2 text-gray-700 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 focus:outline-none"
+          >
+            <option>Sort by Newest</option>
+            <option>Most Liked</option>
+            <option>Oldest</option>
+          </select>
+        </div>
+
+        <!-- Create post -->
+        <div class="mb-8">
+          <input type="checkbox" id="toggle-post" class="peer hidden" />
+          <label
+            for="toggle-post"
+            class="cursor-pointer rounded-lg bg-amber-500 px-6 py-2 font-semibold text-white shadow hover:bg-amber-600"
+            >+ Create New Post</label
+          >
+          <div
+            class="mt-4 hidden rounded-xl bg-white p-6 shadow-lg peer-checked:block"
+          >
+            <form class="space-y-4" action="">
+              <input
+                type="text"
+                placeholder="Post Title"
+                class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+              />
+              <textarea
+                name=""
+                id=""
+                placeholder="Write Something..."
+                class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+              ></textarea>
+              <input
+                type="url"
+                placeholder="Image URL"
+                class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+              />
+              <button
+                class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600"
+              >
+                Post
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="mt-12 bg-white py-8 shadow-inner">
       <div class="container mx-auto space-y-4 text-center">
