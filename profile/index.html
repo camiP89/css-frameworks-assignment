@@ -130,6 +130,158 @@
         </div>
       </nav>
     </header>
+    <main class="bg-gray-100 p-4">
+      <div class="container mx-auto px-4">
+        <!-- Profile heading -->
+        <h1
+          class="font-heading text-l mx-auto mb-3 rounded-lg bg-amber-500 p-2 text-center font-bold text-gray-700"
+        >
+          Jane Doe's Profile
+        </h1>
+
+        <div class="mx-auto w-full max-w-7xl overflow-hidden">
+          <!-- Profile Card -->
+          <div
+            class="mx-auto mb-5 overflow-hidden rounded-lg border-2 border-amber-400 bg-white p-6 shadow-lg"
+          >
+            <!-- Avatar -->
+            <div
+              class="mt-6 flex flex-col items-center gap-4 text-center md:flex-row md:justify-center md:gap-10"
+            >
+              <img
+                src="https://i.imghippo.com/files/gfD4253dcg.jpg"
+                alt="Jane Doe profile photo"
+                class="h-32 w-32 rounded-full border-4 border-amber-400 object-cover shadow-xl sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
+              />
+
+              <!-- Edit profile -->
+              <div class="mb-8">
+                <input type="checkbox" id="toggle-edit" class="peer hidden" />
+                <label
+                  for="toggle-edit"
+                  class="cursor-pointer rounded-lg border-2 border-amber-500 px-2 py-1.5 text-sm text-gray-600 shadow-lg transition duration-300 hover:bg-amber-500 hover:text-white"
+                  >Edit</label
+                >
+                <div
+                  class="mt-4 hidden rounded-xl bg-white p-6 shadow-lg peer-checked:block"
+                >
+                  <form class="space-y-4" action="">
+                    <input
+                      type="text"
+                      placeholder="Profile name"
+                      class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                    />
+                    <textarea
+                      name=""
+                      id=""
+                      placeholder="Write Something..."
+                      class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                    ></textarea>
+                    <input
+                      type="url"
+                      placeholder="Image URL"
+                      class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                    />
+                    <button
+                      type="submit"
+                      class="rounded-lg bg-amber-500 px-3 py-2 font-semibold text-white shadow-lg hover:bg-amber-600"
+                    >
+                      Update
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="text-center md:text-left">
+                <!-- Name and Bio-->
+                <h2
+                  class="font-heading text-xl font-bold whitespace-nowrap text-gray-800 uppercase md:text-2xl"
+                >
+                  Jane Doe
+                </h2>
+                <p class="mt-2 text-sm text-gray-600">
+                  I love to bake all things sweet and share my creations with
+                  everyone!
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="m-6 flex flex-col items-center gap-4 text-center md:flex-row md:justify-center md:gap-10"
+            >
+              <!-- Followers / following -->
+              <div>
+                <p class="text-xl font-bold text-gray-800">126</p>
+                <p class="text-xs tracking-wide text-gray-500 uppercase">
+                  Followers
+                </p>
+              </div>
+
+              <div>
+                <p class="text-xl font-bold text-gray-800">67</p>
+                <p class="text-xs tracking-wide text-gray-500 uppercase">
+                  Following
+                </p>
+              </div>
+
+              <!-- Follow Button -->
+              <div>
+                <button
+                  class="rounded-lg bg-amber-500 px-3 py-2 font-semibold text-white shadow-lg hover:bg-amber-600"
+                >
+                  Follow
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Create post -->
+          <div class="mb-8">
+            <input type="checkbox" id="toggle-post" class="peer hidden" />
+            <label
+              for="toggle-post"
+              class="cursor-pointer rounded-lg bg-amber-500 px-6 py-2 font-semibold text-white shadow hover:bg-amber-600"
+              >+ Create New Post</label
+            >
+            <div
+              class="mt-4 hidden rounded-xl bg-white p-6 shadow-lg peer-checked:block"
+            >
+              <form class="space-y-4" action="">
+                <input
+                  type="text"
+                  placeholder="Post Title"
+                  required
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                />
+                <textarea
+                  name=""
+                  type="text"
+                  placeholder="Write Something..."
+                  required
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                ></textarea>
+                <input
+                  type="url"
+                  placeholder="Image URL"
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Image Alt text"
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600"
+                >
+                  Publish
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="mt-12 bg-white py-8 shadow-inner">
       <div class="container mx-auto space-y-4 text-center">
