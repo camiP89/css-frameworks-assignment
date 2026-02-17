@@ -30,7 +30,7 @@
       href="/assets/favicon-16x16.png"
     />
     <link rel="manifest" href="/assets/site.webmanifest" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <script src="/scripts/main.js" type="module"></script>
   </head>
 
@@ -47,12 +47,12 @@
           <div class="hidden items-center space-x-8 md:flex">
             <a
               href="/index.html"
-              class="border-b-2 border-amber-500 px-2 py-2 font-semibold text-amber-500"
+              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
               >Home</a
             >
             <a
               href="/feed/index.html"
-              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
+              class="border-b-2 border-amber-500 px-2 py-2 font-semibold text-amber-500"
               >All Posts</a
             >
             <a
@@ -63,15 +63,11 @@
           </div>
 
           <div class="hidden items-center space-x-4 md:flex">
+            <p>Welcome Jane Doe</p>
             <a
-              href="/profile/index.html"
-              class="rounded-lg border-2 border-amber-500 px-4 py-1.5 text-gray-600 transition duration-300 hover:bg-amber-500 hover:text-white"
-              >Log In</a
-            >
-            <a
-              href="/profile/index.html"
+              href="/index.html"
               class="rounded-lg bg-amber-500 px-4 py-1.5 text-white transition duration-300 hover:bg-amber-600"
-              >Register</a
+              >Log Out</a
             >
           </div>
 
@@ -100,15 +96,15 @@
           <ul class="space-y-2">
             <li>
               <a
-                href="index.html"
-                class="block rounded-lg bg-amber-500 px-3 py-2 font-bold text-white"
+                href="/index.html"
+                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-500"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="/feed/index.html"
-                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-500"
+                class="block px-3 py-2 font-bold text-amber-500"
                 >All Posts</a
               >
             </li>
@@ -120,23 +116,20 @@
               >
             </li>
             <li>
-              <a
-                href="/profile/index.html"
-                class="block rounded-lg border-2 border-amber-500 px-3 py-1.5 text-center font-semibold text-gray-700 hover:text-amber-500"
-                >Log In</a
-              >
+              <p class="text-center">Welcome Jane Doe</p>
             </li>
             <li>
               <a
-                href="/profile/index.html"
+                href="/index.html"
                 class="block rounded-lg bg-amber-500 px-3 py-1.5 text-center font-semibold text-white"
-                >Register</a
+                >Log Out</a
               >
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main class="bg-gray-100 p-4">
       <div class="container mx-auto px-4">
         <h1
@@ -184,12 +177,14 @@
               <input
                 type="text"
                 placeholder="Post Title"
+                required
                 class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
               />
               <textarea
                 name=""
                 id=""
                 placeholder="Write Something..."
+                required
                 class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
               ></textarea>
               <input
@@ -198,7 +193,8 @@
                 class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
               />
               <button
-                class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600"
+                type="submit"
+                class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600 active:bg-green-600"
               >
                 Post
               </button>
@@ -214,24 +210,36 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Joe Smith
+              </h2>
+              <span class="text-xs text-gray-500">9h</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>47 Comments</span>
+                <span>20 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/OaF1875v.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Like The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
               <h2
-                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                class="font-heading text-md line-clamp-1 font-semibold text-gray-800"
               >
                 Time to get Coding!
               </h2>
@@ -265,19 +273,32 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Jane Doe
+              </h2>
+              <span class="text-xs text-gray-500">11h</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>40 Comments</span>
+                <span>67 shared</span>
+                <span>🧡 222</span>
+              </div>
+            </div>
+
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/pyS9592dw.webp')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -287,7 +308,7 @@
                 Who wants some Cake??
               </h2>
               <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
-                Just had the most delicious chocolate cake. Secret ingredient
+                Just made the most delicious chocolate cake. Secret ingredient
                 coconut oil in the batter instead of butter.
               </p>
             </div>
@@ -316,19 +337,32 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Charles Gallaway
+              </h2>
+              <span class="text-xs text-gray-500">1d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>32 Comments</span>
+                <span>23 shared</span>
+                <span>🧡 136</span>
+              </div>
+            </div>
+
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/RlT5213iwI.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -367,19 +401,32 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Oliver Charles
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>67 Comments</span>
+                <span>67 shared</span>
+                <span>🧡 67</span>
+              </div>
+            </div>
+
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/det3763ZjI.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -418,19 +465,32 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Oliver Charles
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>67 Comments</span>
+                <span>67 shared</span>
+                <span>🧡 67</span>
+              </div>
+            </div>
+
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/Nz7164Vg.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -469,19 +529,31 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Scarlet Olivia
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>87 Comments</span>
+                <span>99 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/Xn3564Ar.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -520,19 +592,31 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Charles Gallaway
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>102 Comments</span>
+                <span>88 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/XNt5995hQg.JPG')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -573,19 +657,31 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Lily Anne
+              </h2>
+              <span class="text-xs text-gray-500">3d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>88 Comments</span>
+                <span>24 shared</span>
+                <span>🧡 164</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/jO1414TU.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -595,7 +691,7 @@
                 What a beautiful flower.
               </h2>
               <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
-                Lucky mummy on mothers day. Thank you kids. ❤️🌺
+                Look at this beautiful flower i got as a thank you for helping a friend. ❤️🌺
               </p>
             </div>
             <!-- Like button -->
@@ -623,19 +719,31 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Winston Pugh
+              </h2>
+              <span class="text-xs text-gray-500">4d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>47 Comments</span>
+                <span>20 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/JWz6895xp.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -673,19 +781,31 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+             <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Scarlet Olivia
+              </h2>
+              <span class="text-xs text-gray-500">5d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>41 Comments</span>
+                <span>15 shared</span>
+                <span>🧡 155</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/Sgq2136BxE.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -724,19 +844,31 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+             <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Lily Anne
+              </h2>
+              <span class="text-xs text-gray-500">4 Feb</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>87 Comments</span>
+                <span>18 shared</span>
+                <span>🧡 165</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/Y1579pAg.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -746,7 +878,7 @@
                 Best friends ❤️🐶
               </h2>
               <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
-                Winston and his best friend Sebastian. Aren't they just the
+                Aren't they just the
                 cutest! ❤️
               </p>
             </div>
@@ -775,19 +907,31 @@
           <div
             class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
           >
+             <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Lily Anne
+              </h2>
+              <span class="text-xs text-gray-500">2 Feb</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>55 Comments</span>
+                <span>42 shared</span>
+                <span>🧡 160</span>
+              </div>
+            </div>
             <!-- Image-->
             <div
               class="h-60 w-full bg-[url('https://i.imghippo.com/files/UxYj6052NPs.jpg')] bg-cover bg-center"
             ></div>
             <!-- Hover text -->
             <div
-              class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
-              <span
-                class="rounded-full bg-black/70 px-4 py-2 font-semibold text-white shadow-lg backdrop-blur-sm"
-              >
-                Love The Post
-              </span>
+              Love The Post
             </div>
             <!-- Bottom of Card -->
             <div class="p-4">
@@ -797,7 +941,7 @@
                 Ready for Christmas! 🌲🎁🎅🐶🎀
               </h2>
               <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
-                My daughter has made bows for the dogs for Christmas, don't they
+                I made bows for the dogs for Christmas, don't they
                 look adorable. 😍
               </p>
             </div>
