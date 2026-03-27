@@ -1,0 +1,30 @@
+{
+  "name": "css-frameworks",
+  "version": "1.0.0",
+  "description": "Front-end social media application built with Tailwind CSS for the CSS Frameworks course assignment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css --minify",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camiP89/css-frameworks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/camiP89/css-frameworks/issues"
+  },
+  "homepage": "https://github.com/camiP89/css-frameworks#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.18"
+  }
+}

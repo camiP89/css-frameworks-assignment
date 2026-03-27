@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View user profiles on CHATTA Links to explore posts, followers, and activity, or manage your own profile."
+    />
+    <title>CHATTA Links | Profile Page</title>
+    <script
+      src="https://kit.fontawesome.com/bfed71705b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="/scripts/main.js" type="module"></script>
+  </head>
+
+  <body class="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gray-100">
+    <header class="bg-white shadow-lg">
+      <nav class="relative container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex items-center">
+            <span class="h-auto w-20">
+              <img src="/assets/chatta-links-logo.png" alt="CHATTA Links logo"
+            /></span>
+          </a>
+
+          <div class="hidden items-center space-x-8 md:flex">
+            <a
+              href="/index.html"
+              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-600"
+              >Home</a
+            >
+            <a
+              href="/feed/index.html"
+              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-600"
+              >All Posts</a
+            >
+            <a
+              href="/profile/index.html"
+              class="border-b-2 border-amber-500 px-2 py-2 font-semibold text-amber-500"
+              >Profile</a
+            >
+          </div>
+
+          <div class="hidden items-center space-x-4 md:flex">
+            <p class="text-md font-heading font-medium">Welcome Jane Doe</p>
+            <a
+              href="/index.html"
+              class="block rounded-lg bg-amber-500 px-4 py-1.5 text-white transition duration-300 hover:bg-amber-600 focus:ring-2 focus:ring-amber-400 focus:outline-none active:bg-amber-700 disabled:opacity-50"
+              >Log Out</a
+            >
+          </div>
+
+          <!-- Burger button -->
+          <div class="flex items-center md:hidden">
+            <button
+              class="group rounded-lg p-2 hover:bg-gray-100 md:hidden"
+              id="menu-btn"
+              aria-label="Open menu"
+            >
+              <svg
+                class="h-6 w-6 text-gray-700 group-hover:text-amber-600"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu-->
+        <div class="absolute top-full left-0 z-50 bg-white w-full hidden space-y-2 shadow-lg px-4 pb-4 md:hidden" id="mobile-menu">
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="/index.html"
+                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-600 active:text-amber-600"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/feed/index.html"
+                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-600"
+                >All Posts</a
+              >
+            </li>
+            <li>
+              <a
+                href="/profile/index.html"
+                class="block px-3 py-2 font-bold text-amber-500"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <p class="text-center text-md font-heading font-medium">Welcome Jane Doe</p>
+            </li>
+
+            <li>
+              <a
+                href="/index.html"
+                class="shadow-l block rounded-lg bg-amber-500 px-3 py-1.5 text-center font-semibold text-white hover:bg-amber-600 focus:ring-2 focus:ring-amber-400 focus:outline-none active:bg-amber-700 disabled:opacity-50"
+                >Log Out</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-gray-100 p-4">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <!-- Profile heading -->
+        <h1
+          class="font-heading text-lg md:text-2xl mx-auto mb-3 rounded-lg bg-amber-500 p-2 text-center font-bold text-gray-700"
+        >
+          Jane Doe's Profile
+        </h1>
+
+        <div class="mx-auto w-full overflow-hidden">
+          <!-- Profile Card -->
+          <div
+            class="mx-auto mb-5 overflow-hidden rounded-lg border-2 border-amber-400 bg-white p-6 shadow-lg"
+          >
+            <!-- Avatar -->
+            <div
+              class="mt-6 flex flex-col items-center gap-4 text-center md:flex-row md:justify-center md:gap-5"
+            >
+              <img
+                src="https://i.imghippo.com/files/gfD4253dcg.jpg"
+                alt="Jane Doe profile photo"
+                class="h-32 w-32 rounded-full border-4 border-amber-400 object-cover shadow-xl sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
+              />
+
+              <div class="text-center md:text-left">
+                <!-- Name and Bio-->
+                <h2
+                  class="font-heading text-xl font-bold whitespace-nowrap text-gray-800 uppercase md:text-2xl"
+                >
+                  Jane Doe
+                </h2>
+                <p class="mt-2 text-sm text-gray-600">
+                  I love to bake all things sweet and share my creations with
+                  everyone!
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="m-6 flex flex-col items-center gap-4 text-center md:flex-row md:justify-center md:gap-10"
+            >
+              <!-- Followers / following -->
+              <div>
+                <p class="text-xl font-bold text-gray-800">126</p>
+                <p class="text-xs tracking-wide text-gray-500 uppercase">
+                  Followers
+                </p>
+              </div>
+
+              <div>
+                <p class="text-xl font-bold text-gray-800">67</p>
+                <p class="text-xs tracking-wide text-gray-500 uppercase">
+                  Following
+                </p>
+              </div>
+
+              <!-- Follow Button -->
+              <div>
+                <button
+                  class="rounded-lg bg-amber-500 px-3 py-2 font-semibold text-white shadow-lg hover:bg-amber-600 focus:ring-2 focus:ring-amber-400 focus:outline-none active:bg-amber-700 disabled:opacity-50"
+                >
+                  Follow
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Create post -->
+          <div class="relative mb-6">
+            <input type="checkbox" id="toggle-post" class="peer hidden" />
+            <label
+              for="toggle-post"
+              class="cursor-pointer rounded-lg bg-amber-500 px-6 py-2 font-semibold text-white shadow hover:bg-amber-600"
+              >+ Create New Post</label
+            >
+            <div
+              class="absolute z-40 top-full left-0 w-full max-w-md mt-4 hidden rounded-xl bg-white p-6 shadow-lg peer-checked:block"
+            >
+              <form class="space-y-4" action="">
+                <input
+                  type="text"
+                  placeholder="Post Title"
+                  required
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                />
+                <textarea
+                  name=""
+                  type="text"
+                  placeholder="Write Something..."
+                  required
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                ></textarea>
+                <input
+                  type="url"
+                  placeholder="Image URL"
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Image Alt text"
+                  class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600 focus:ring-2 focus:ring-amber-400 focus:outline-none active:bg-amber-700 disabled:opacity-50"
+                >
+                  Publish
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Card grids -->
+          <div
+            class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+          >
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">11h</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>40 Comments</span>
+                  <span>67 shared</span>
+                  <span>🧡 222</span>
+                </div>
+              </div>
+
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/pyS9592dw.webp')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Who wants some Cake??
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  Just made the most delicious chocolate cake. Secret ingredient
+                  coconut oil in the batter instead of butter.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">1d</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>40 Comments</span>
+                  <span>11 shared</span>
+                  <span>🧡 101</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/yco1912bSM.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Delicious Hot Cross Buns
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  A must for Easter time, Homemade Hot Cross Buns. Perfect,
+                  toasted with butter and a cup of English Tea.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">2d</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>52 Comments</span>
+                  <span>36 shared</span>
+                  <span>🧡 160</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/QOf2542Szo.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Scrumptious Chocolate Biscuits
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  These Chocolate Biscuits are so easy to make and my go to for
+                  a quick sweet treat. All you need is four ingredients, and
+                  often they are in most homes already. They can be decorated
+                  with simple icing sugar mixed with water and topped with
+                  sprinkles, perfect for special occasions.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">4d</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>56 Comments</span>
+                  <span>32 shared</span>
+                  <span>🧡 235</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/ZEz2794vY.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Pancakes perfect for valentines
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  I just love these pancakes, the thicker batter makes it easy
+                  to form different shapes. An easy surprise for valentines
+                  morning, topped with sour cream and berries or bacon and maple
+                  syrup.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">4 feb</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>112 Comments</span>
+                  <span>201 shared</span>
+                  <span>🧡 160</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/zv9287GU.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Moist Carrot Cake
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  This moist and almost good for you Carrot Cake will be sure to
+                  impress for any occasion. Layers of cream cheese filling and
+                  topped with walnuts.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">2 feb</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>66 Comments</span>
+                  <span>54 shared</span>
+                  <span>🧡 223</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/Rw7044oRg.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Heavenly Caramel sauce
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  This is heaven in a jar. The most delicious caramel sauce that
+                  pairs with almost any sweet treat. My favorite pairing is the
+                  apple cake.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">30 Jan</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>87 Comments</span>
+                  <span>55 shared</span>
+                  <span>🧡 160</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/EVc8159JzM.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Sticky Malt Loaf.
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  This wonderful Sticky Malt Loaf is another almost good for you
+                  treat. Malt being naturally high in b vitamins. Perfect with a
+                  nice helping of butter.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">28 Jan</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>98 Comments</span>
+                  <span>57 shared</span>
+                  <span>🧡 88</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/WB1992syg.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Lemon Drizzle Loaf
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  This is such a gorgeous cake, easy to make, looks spectacular
+                  and tastes heavenly!
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">27 Jan</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>250 Comments</span>
+                  <span>36 shared</span>
+                  <span>🧡 99</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/cUev7908VuE.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Deliciously Moist Apple Cake
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  This is my absolute go to Apple Cake, It uses coconut oil
+                  instead of butter. It is so simple to make and taste heavenly
+                  on its own or with home made caramel sauce.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">25 Jan</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>47 Comments</span>
+                  <span>20 shared</span>
+                  <span>🧡 140</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/NblE5224u.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  No-Bake Cheese Cake with Strawberries
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  This is such a gorgeous cake to serve in the summer. I like to
+                  make a double portion of the biscuit base. It looks amazing
+                  and tastes it too.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">23 Jan</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>89 Comments</span>
+                  <span>102 shared</span>
+                  <span>🧡 160</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/rXKN3875Pus.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Chocolate chip cookies (Best Ever)
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  These are the ultimate cookies, they are everything you are
+                  looking for in a cookie, soft on the inside, chewy, a crispy
+                  edge and so moorish.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+            >
+              <!-- top of Card -->
+              <div class="border-b border-gray-200 p-4">
+                <div class="flex flex-row justify-between"></div>
+                <h2
+                  class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+                >
+                  Jane Doe
+                </h2>
+                <span class="text-xs text-gray-500">22 Jan</span>
+
+                <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                  <span>202 Comments</span>
+                  <span>54 shared</span>
+                  <span>🧡 235</span>
+                </div>
+              </div>
+              <!-- Image-->
+              <div
+                class="h-60 w-full bg-[url('https://i.imghippo.com/files/ZfJ2831GE.jpg')] bg-cover bg-center"
+              ></div>
+              <!-- Hover text -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                Love The Post
+              </div>
+              <!-- Bottom of Card -->
+              <div class="p-4">
+                <h2
+                  class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+                >
+                  Apple and blackberry Crumble
+                </h2>
+                <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                  Another one of my summer favorites, this crumble is just so
+                  good. The flavors are perfect together and the rich color from
+                  the blackberries is stunning and the apples get stained a
+                  gorgeous pink color.
+                </p>
+              </div>
+              <!-- Like button -->
+              <div
+                class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 drop-shadow-md"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-12 bg-white py-8 shadow-inner">
+      <div class="container mx-auto space-y-4 text-center">
+        <a href="index.html">
+          <img
+            src="/assets/chatta-links-logo.png"
+            alt="CHATTA Links logo"
+            class="m-auto h-auto w-20"
+          />
+        </a>
+
+        <div class="flex justify-center space-x-6 text-gray-600">
+          <a href="/index.html" class="hover:text-amber-600">Home</a>
+          <a href="terms/index.html" class="hover:text-amber-600">Terms</a>
+          <a href="privacy/index.html" class="hover:text-amber-600">Privacy</a>
+        </div>
+        <div class="flex justify-center space-x-5 text-xl text-gray-500">
+          <a href="https://www.facebook.com" aria-label="Link to Facebook">
+            <i class="fa-brands fa-square-facebook hover:text-amber-600"></i>
+          </a>
+          <a href="https://www.instagram.com" aria-label="Link to Instagram">
+            <i class="fa-brands fa-square-instagram hover:text-amber-600"></i>
+          </a>
+          <a href="https://www.youtube.com" aria-label="Link to YouTube">
+            <i class="fa-brands fa-square-youtube hover:text-amber-600"></i>
+          </a>
+          <a href="https://www.tiktok.com" aria-label="Link to TikTok">
+            <i class="fa-brands fa-tiktok hover:text-amber-600"></i>
+          </a>
+          <a href="https://x.com" aria-label="Link to x (formerly Twitter)">
+            <i class="fa-brands fa-square-x-twitter hover:text-amber-600"></i>
+          </a>
+        </div>
+        <p class="text-sm text-gray-400">
+          Copyright &copy; CHATTALinksLtd 2026
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

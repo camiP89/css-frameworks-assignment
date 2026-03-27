@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse the latest posts on CHATTA Links. Discover updates from people you follow and explore new content in real time."
+    />
+    <title>CHATTA Links | Post Feed Page</title>
+    <script
+      src="https://kit.fontawesome.com/bfed71705b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="/scripts/main.js" type="module"></script>
+  </head>
+
+  <body class="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gray-100">
+    <header class="bg-white shadow-lg">
+      <nav class="relative container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex items-center">
+            <span class="h-auto w-20">
+              <img src="/assets/chatta-links-logo.png" alt="CHATTA Links logo"
+            /></span>
+          </a>
+
+          <div class="hidden items-center space-x-8 md:flex">
+            <a
+              href="/index.html"
+              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
+              >Home</a
+            >
+            <a
+              href="/feed/index.html"
+              class="border-b-2 border-amber-500 px-2 py-2 font-semibold text-amber-500"
+              >All Posts</a
+            >
+            <a
+              href="/profile/index.html"
+              class="px-2 py-4 font-medium text-gray-600 transition duration-300 hover:text-amber-500"
+              >Profile</a
+            >
+          </div>
+
+          <div class="hidden items-center space-x-4 md:flex">
+            <p class="text-md font-heading font-medium">Welcome Jane Doe</p>
+            <a
+              href="/index.html"
+              class="rounded-lg bg-amber-500 px-4 py-1.5 text-white transition duration-300 hover:bg-amber-600 focus:ring-2 focus:ring-amber-400 focus:outline-none active:bg-amber-700 disabled:opacity-50"
+              >Log Out</a
+            >
+          </div>
+
+          <!-- Burger button -->
+          <div class="flex items-center md:hidden">
+            <button
+              class="group rounded-lg p-2 hover:bg-gray-100 md:hidden"
+              id="menu-btn"
+              aria-label="Open menu"
+            >
+              <svg
+                class="h-6 w-6 text-gray-700 group-hover:text-amber-600"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div
+          class="absolute top-full left-0 z-50 hidden w-full bg-white px-4 pb-4 shadow-lg md:hidden"
+          id="mobile-menu"
+        >
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="/index.html"
+                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-600 active:text-amber-600"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/feed/index.html"
+                class="block px-3 py-2 font-bold text-amber-500"
+                >All Posts</a
+              >
+            </li>
+            <li>
+              <a
+                href="/profile/index.html"
+                class="block px-3 py-2 font-semibold text-gray-700 hover:text-amber-600"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <p class="text-md font-heading text-center font-medium">
+                Welcome Jane Doe
+              </p>
+            </li>
+            <li>
+              <a
+                href="/index.html"
+                class="block rounded-lg bg-amber-500 px-3 py-1.5 text-center font-semibold text-white hover:bg-amber-600 focus:ring-2 focus:ring-amber-400 focus:outline-none active:bg-amber-700 disabled:opacity-50"
+                >Log Out</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-gray-100 p-4">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h1
+          class="font-heading mx-auto mb-3 rounded-lg bg-amber-500 p-2 text-center text-lg font-bold text-gray-700 md:text-2xl"
+        >
+          All Posts
+        </h1>
+        <div
+          class="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+        >
+          <!-- search bar -->
+          <div class="relative w-full md:w-1/2">
+            <input
+              type="text"
+              placeholder="Search Posts..."
+              class="w-full rounded-lg border-2 border-gray-300 py-2 pr-4 pl-10 focus:border-amber-500 focus:ring-amber-200 focus:outline-none"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-gray-400"
+            ></i>
+          </div>
+
+          <!-- Sort -->
+          <select
+            class="rounded-lg border-gray-300 bg-white px-4 py-2 text-gray-700 focus:border-amber-600 focus:ring-2 focus:ring-amber-200 focus:outline-none"
+          >
+            <option>Sort by Newest</option>
+            <option>Most Liked</option>
+            <option>Oldest</option>
+          </select>
+        </div>
+
+        <!-- Create post -->
+        <div class="relative mb-6">
+          <input type="checkbox" id="toggle-post" class="peer hidden" />
+          <label
+            for="toggle-post"
+            class="cursor-pointer rounded-lg bg-amber-500 px-6 py-2 font-semibold text-white shadow hover:bg-amber-600"
+            >+ Create New Post</label
+          >
+          <div
+            class="absolute top-full left-0 z-50 mt-4 hidden rounded-xl bg-white p-6 shadow-lg peer-checked:block"
+          >
+            <form class="space-y-4" action="">
+              <input
+                type="text"
+                placeholder="Post Title"
+                required
+                class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+              />
+              <textarea
+                name=""
+                id=""
+                placeholder="Write Something..."
+                required
+                class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+              ></textarea>
+              <input
+                type="url"
+                placeholder="Image URL"
+                class="w-full rounded-lg border border-gray-300 p-2 focus:border-amber-500 focus:ring-amber-300 focus:outline-none"
+              />
+              <button
+                type="submit"
+                class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600 focus:ring-2 focus:ring-amber-400 focus:outline-none active:bg-amber-700 disabled:opacity-50"
+              >
+                Post
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Card grids -->
+        <div
+          class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        >
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Joe Smith
+              </h2>
+              <span class="text-xs text-gray-500">9h</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>47 Comments</span>
+                <span>20 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/OaF1875v.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Like The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading text-md line-clamp-1 font-semibold text-gray-800"
+              >
+                Time to get Coding!
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                I am really enjoying learning coding, but it is very difficult.
+                There is so much to learn.
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Jane Doe
+              </h2>
+              <span class="text-xs text-gray-500">11h</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>40 Comments</span>
+                <span>67 shared</span>
+                <span>🧡 222</span>
+              </div>
+            </div>
+
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/pyS9592dw.webp')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Who wants some Cake??
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                Just made the most delicious chocolate cake. Secret ingredient
+                coconut oil in the batter instead of butter.
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Charles Gallaway
+              </h2>
+              <span class="text-xs text-gray-500">1d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>32 Comments</span>
+                <span>23 shared</span>
+                <span>🧡 136</span>
+              </div>
+            </div>
+
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/RlT5213iwI.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Camping in Eidsfoss Norway :)
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                Love camping in Norway! One of the reasons i moved here. You
+                don't get this in London.
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Oliver Charles
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>67 Comments</span>
+                <span>67 shared</span>
+                <span>🧡 67</span>
+              </div>
+            </div>
+
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/det3763ZjI.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Fun day in Bergen.
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                Didn't enjoy the small plane journey, but it has been a fun day.
+                Can't wait to meet the new member of our family! :)
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Oliver Charles
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>67 Comments</span>
+                <span>67 shared</span>
+                <span>🧡 67</span>
+              </div>
+            </div>
+
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/Nz7164Vg.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Our new fur baby!
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                Meet Winston. The newest member of our family. He is just the
+                cutest!
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Scarlet Olivia
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>87 Comments</span>
+                <span>99 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/Xn3564Ar.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Wild strawberry picking.
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                Lovely day picking wild strawberries. Now time to make a pie.
+                The taste of summer!
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Charles Gallaway
+              </h2>
+              <span class="text-xs text-gray-500">2d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>102 Comments</span>
+                <span>88 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/XNt5995hQg.JPG')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                We forgot the tent poles 🤣
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                So we're in the middle of nowhere ready to pitch the tent after
+                a long day... And we have forgotten the tent poles. I think we
+                did a pretty good job with utilizing our surroundings. Thank
+                goodness for the red wine! 🍷🤣 You've got to laugh.
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Lily Anne
+              </h2>
+              <span class="text-xs text-gray-500">3d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>88 Comments</span>
+                <span>24 shared</span>
+                <span>🧡 164</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/jO1414TU.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                What a beautiful flower.
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                Look at this beautiful flower i got as a thank you for helping a
+                friend. ❤️🌺
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Winston Pugh
+              </h2>
+              <span class="text-xs text-gray-500">4d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>47 Comments</span>
+                <span>20 shared</span>
+                <span>🧡 140</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/JWz6895xp.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Crete here we come ☀️✈️🏖️🍹
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                First beach holiday in 6 years. I am very ready! 😎
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Scarlet Olivia
+              </h2>
+              <span class="text-xs text-gray-500">5d</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>41 Comments</span>
+                <span>15 shared</span>
+                <span>🧡 155</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/Sgq2136BxE.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Strawberry Daiquiri 🍹🍓😊
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                There's something about cocktails and the sun after a hard day
+                at the beach..
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Lily Anne
+              </h2>
+              <span class="text-xs text-gray-500">4 Feb</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>87 Comments</span>
+                <span>18 shared</span>
+                <span>🧡 165</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/Y1579pAg.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Best friends ❤️🐶
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                Aren't they just the cutest! ❤️
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border-2 border-amber-400 bg-white shadow-lg"
+          >
+            <!-- top of Card -->
+            <div class="border-b border-gray-200 p-4">
+              <div class="flex flex-row justify-between"></div>
+              <h2
+                class="font-heading text-sm font-semibold tracking-wide text-gray-800 uppercase"
+              >
+                Lily Anne
+              </h2>
+              <span class="text-xs text-gray-500">2 Feb</span>
+
+              <div class="mt-1 flex items-center gap-5 text-xs text-gray-500">
+                <span>55 Comments</span>
+                <span>42 shared</span>
+                <span>🧡 160</span>
+              </div>
+            </div>
+            <!-- Image-->
+            <div
+              class="h-60 w-full bg-[url('https://i.imghippo.com/files/UxYj6052NPs.jpg')] bg-cover bg-center"
+            ></div>
+            <!-- Hover text -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/65 text-lg font-bold text-white uppercase opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              Love The Post
+            </div>
+            <!-- Bottom of Card -->
+            <div class="p-4">
+              <h2
+                class="font-heading line-clamp-1 text-lg font-bold text-gray-800"
+              >
+                Ready for Christmas! 🌲🎁🎅🐶🎀
+              </h2>
+              <p class="mt-1 line-clamp-2 font-sans text-sm text-gray-600">
+                I made bows for the dogs for Christmas, don't they look
+                adorable. 😍
+              </p>
+            </div>
+            <!-- Like button -->
+            <div
+              class="absolute top-4 right-4 text-white transition-all duration-300 group-hover:text-amber-500 group-focus:text-red-500 group-active:text-amber-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 drop-shadow-md"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-12 bg-white py-8 shadow-inner">
+      <div class="container mx-auto space-y-4 text-center">
+        <a href="/index.html">
+          <img
+            src="/assets/chatta-links-logo.png"
+            alt="CHATTA Links logo"
+            class="m-auto h-auto w-20"
+          />
+        </a>
+
+        <div class="flex justify-center space-x-6 text-gray-600">
+          <a href="/index.html" class="hover:text-amber-600">Home</a>
+          <a href="terms/index.html" class="hover:text-amber-600">Terms</a>
+          <a href="privacy/index.html" class="hover:text-amber-600">Privacy</a>
+        </div>
+        <div class="flex justify-center space-x-5 text-xl text-gray-500">
+          <a href="https://www.facebook.com" aria-label="Link to Facebook">
+            <i class="fa-brands fa-square-facebook hover:text-amber-600"></i>
+          </a>
+          <a href="https://www.instagram.com" aria-label="Link to Instagram">
+            <i class="fa-brands fa-square-instagram hover:text-amber-600"></i>
+          </a>
+          <a href="https://www.youtube.com" aria-label="Link to YouTube">
+            <i class="fa-brands fa-square-youtube hover:text-amber-600"></i>
+          </a>
+          <a href="https://www.tiktok.com" aria-label="Link to TikTok">
+            <i class="fa-brands fa-tiktok hover:text-amber-600"></i>
+          </a>
+          <a href="https://x.com" aria-label="Link to x (formerly Twitter)">
+            <i class="fa-brands fa-square-x-twitter hover:text-amber-600"></i>
+          </a>
+        </div>
+        <p class="text-sm text-gray-400">
+          Copyright &copy; CHATTALinksLtd 2026
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
